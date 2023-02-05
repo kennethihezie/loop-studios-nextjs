@@ -1,3 +1,4 @@
+import CreationSection from '@/components/creation_section/creation_section'
 import FeatureSection from 'components/feature_section/feature_section'
 import Hero from 'components/hero/hero'
 import Head from 'next/head'
@@ -21,6 +22,8 @@ export default class LoopStudios extends Component{
 
         <Hero />
         <FeatureSection />
+        
+        <CreationSection />
         </>
       )
   }

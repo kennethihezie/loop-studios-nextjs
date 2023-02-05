@@ -1,0 +1,7 @@
+@tailwind components;
+
+@layer components{
+  .btn{
+     @apply px-10 py-2 my-0 font-bold tracking-widest uppercase border-2 border-black font-alata hover:bg-black hover:text-white;
+  }
+}
