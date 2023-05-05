@@ -1,6 +1,12 @@
 import Image from 'next/image'
+import styles from './styles.module.css'
 
-const NavBar = () => {
+interface INavBarProps {
+    click: () => {}
+    isOpen: boolean
+}
+
+const NavBar = ({click, isOpen}: INavBarProps) => {
     return (
         <nav className="flex items-center justify-between font-bold text-white">
             {/* Logo */}
@@ -36,6 +42,14 @@ const NavBar = () => {
                 </div>
               </div>
               {/* todo Hamburger Button*/}
+
+              <div className="md:hidden">
+                <button className={`z-40 block ${styles.hamburger} ${isOpen ? styles.open : ''} md:hidden focus:outline-none`} onClick={click}>
+                   <span className={styles.hamburgerTop}></span>
+                   <span className={styles.hamburgerMiddle}></span>
+                   <span className={styles.hamburgerBottom}></span>
+                </button>
+              </div>
         </nav>
     )
 }
