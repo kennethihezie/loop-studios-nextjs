@@ -33,7 +33,7 @@ const Footer = () => {
                         </div>
 
                         <div className="h-10 group">
-                            <a href="#">Evemts</a>
+                            <a href="#">Events</a>
                             <div className="group-hover:border-b group-hover:border-blue-100"></div>
                         </div>
 

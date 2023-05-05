@@ -2,6 +2,6 @@
 
 @layer components{
    .item {
-       @apply relative overflow-hidden md:w-1/4;
+       @apply relative overflow-hidden md:w-1/4 rounded-md;
     }
 }

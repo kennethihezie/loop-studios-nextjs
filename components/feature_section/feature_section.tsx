@@ -3,7 +3,7 @@ import Image from 'next/image'
 const FeatureSection = () => {
     return (
         <section id="feature">
-           <div className="relative container flex flex-col max-w-6xl mx-auto my-32 px-6 text-gray-900 md:flex-row md:px-0">
+           <div className="relative container flex flex-col max-w-6xl mx-auto my-32 px-6 text-gray-900 md:flex-row md:px-0 rounded-md">
               <Image
                 src={'/images/desktop/image-interactive.jpg'}
                 width={700}
