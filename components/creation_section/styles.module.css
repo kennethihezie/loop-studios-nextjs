@@ -4,4 +4,8 @@
   .btn{
      @apply px-10 py-2 my-0 font-bold tracking-widest uppercase border-2 border-black font-alata hover:bg-black hover:text-white;
   }
+
+  .container {
+       @apply flex flex-col justify-between w-full space-y-6 text-2xl text-white uppercase mt-6 md:flex-row md:space-y-0 md:space-x-8;
+   }
 }

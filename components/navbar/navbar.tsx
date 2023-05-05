@@ -12,7 +12,7 @@ const NavBar = () => {
               alt='' />    
 
 
-             {/* Menu we want the menu to hidden in mobile screen */}
+             {/* Menu we want the menu to be hidden in mobile screen */}
               <div className="hidden h-10 font-alata md:flex md:space-x-8">
                 <div className="group">
                     <a href="#">About</a>

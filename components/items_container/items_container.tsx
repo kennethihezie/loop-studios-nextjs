@@ -8,7 +8,6 @@ interface ItemsContainerProps{
 
 const ItemsContainer = ({mobileImage, desktopImage, title} : ItemsContainerProps) => {
     return (
-        <div className={styles.container}>
             <div className={`group ${styles.item}`}>
                 <img src={`${'images/desktop/'}${desktopImage}`} className="hidden w-full duration-200 md:block group-hover:scale-110"/>
                 <img src={`${'images/mobile/'}${mobileImage}`} className="w-full md:hidden"/>
@@ -19,7 +18,6 @@ const ItemsContainer = ({mobileImage, desktopImage, title} : ItemsContainerProps
                 <h5 className="absolute px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black">
                     { title }
                 </h5>
-            </div>
         </div>
     )
 }
