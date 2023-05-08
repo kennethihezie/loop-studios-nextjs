@@ -3,11 +3,14 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
+# branch name to trigger build
 trigger:
 - main
 
+# virtual to use to build
 pool:
   vmImage: ubuntu-latest
+
 
 steps:
 - task: NodeTool@0
@@ -19,3 +22,14 @@ steps:
     npm install
     npm run build
   displayName: 'npm install and build'
+
+- script: 'echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt'
+  displayName: 'Write build info'
+  workingDirectory: loop-studios-nextjs/  
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: drop'
+  condition: succeeded()
+
+  
+
