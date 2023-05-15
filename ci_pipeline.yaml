@@ -5,7 +5,12 @@
 
 # branch name to trigger build
 trigger:
-- main
+# build only when pushed to main branch
+# - main
+
+# build when pushed to any branch.
+- '*'
+
 
 # virtual to use to build
 pool:
@@ -23,9 +28,21 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
+- task: NodeTool@0
+  displayName: 'Publish the project - Release'
+  inputs:
+    command: 'publish'
+    publishWebProjects: false
+    arguments: '--no-build --configuration Release --output $(Build.ArtifactStagingDirectory)/Release'
+    zipAfterPublish: true
+
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
   condition: succeeded()
+
+
+# stoped at Exercise - Publish the result to the pipeline
+  
 
   
 

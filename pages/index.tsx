@@ -41,6 +41,7 @@ export default class LoopStudios extends Component<IProps, IState>{
          click={this.toggleMenu}
          isOpen={this.state.isOpen}
         />
+        
         <FeatureSection />
         
         <CreationSection />
