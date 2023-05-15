@@ -35,6 +35,7 @@ steps:
     contents: |
        .next/*
     targetFolder: '$(Build.ArtifactStagingDirectory)'
+    zipAfterPublish: true
   displayName: 'Copy project files'
 
 - task: PublishPipelineArtifact@1
