@@ -33,10 +33,7 @@ steps:
   inputs:
     sourceFolder: '$(Build.SourcesDirectory)'
     contents: |
-       components/*
-       pages/*
-       styles/*
-       public/*
+       .next/*
     targetFolder: '$(Build.ArtifactStagingDirectory)'
   displayName: 'Copy project files'
 
