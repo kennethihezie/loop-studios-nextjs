@@ -30,23 +30,20 @@ steps:
   displayName: 'npm build'
 
 - task: CopyFiles@2
-  inputs: 
+  inputs:
     sourceFolder: '$(Build.SourcesDirectory)'
     contents: |
-      components/*
-      pages/*
-      public/*
-      styles/*
+       src/*
+       public/*
     targetFolder: '$(Build.ArtifactStagingDirectory)'
-  displayName: 'Copy project files'   
+  displayName: 'Copy project files'
 
-- task: PublishBuildArtifacts@1
+- task: PublishPipelineArtifact@1
   inputs:
-    artifactName: loop-studios
+    artifactName: e2e-server
     targetPath: '$(Build.ArtifactStagingDirectory)'
     publishLocation: 'pipeline'
-  displayName: 'Publish Artifact'
-  condition: succeeded()
+  displayName: 'Publish npm artifact'
 
 
 # stoped at Exercise - Publish the result to the pipeline
