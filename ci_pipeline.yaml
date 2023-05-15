@@ -16,11 +16,14 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+# defining variables
+variables:
+  nodeVersion: '16.x'
 
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '16.x'
+    versionSpec: '$(nodeVersion)'
   displayName: 'Install Node.js'
 
 - script: npm install
